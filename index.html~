@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huellitas - Productos Hechos a Mano</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <section id="catalogo">
+        <div class="container">
+            <h2>Mini Catálogo</h2>
+            <div class="carousel">
+                <div class="card" onclick="openModal('Broche para Cabello', 'pin.jpg', 'Hermoso broche pequeño diseñado para sujetar tu cabello con delicadeza y estilo. Su tamaño compacto lo hace ideal para cualquier ocasión.')">
+                    <img src="pin.jpg" alt="Broche para Cabello">
+                    <h3>Broche para Cabello</h3>
+                </div>
+                <div class="card" onclick="openModal('Llaveros de Gatito', 'gatito.jpg', 'Tiernos y encantadores llaveros en forma de gatito, perfectos para darle un toque especial a tus llaves, mochila o bolso.')">
+                    <img src="gatito.jpg" alt="Llaveros de Gatito">
+                    <h3>Llaveros de Gatito</h3>
+                </div>
+                <div class="card" onclick="openModal('Mentita', 'mentita.jpg', 'Pin inspirado en Mentita de Hora de Aventura. Su diseño vibrante lo convierte en un accesorio ideal para mochilas, chaquetas o estuches.')">
+                    <img src="mentita.jpg" alt="Mentita">
+                    <h3>Mentita</h3>
+                </div>
+                <div class="card" onclick="openModal('Pines Studio Ghibli', 'Pines.jpg', 'Colección de pines inspirados en los icónicos personajes de El Castillo Vagabundo. Perfectos para fans del Studio Ghibli.')">
+                    <img src="Pines.jpg" alt="Pines Studio Ghibli">
+                    <h3>Pines Studio Ghibli</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">Volver al Menú</button>
+            <h2 id="modal-title"></h2>
+            <img id="modal-img" src="" alt="">
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, imgSrc, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
